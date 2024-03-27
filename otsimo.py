@@ -179,10 +179,7 @@ def get_all_issues(token, owner, repo):
         else:
             break
     return all_issues
-
-
-#def create_project(token, project_name, repo, project_description):
-    # Example: 'username/repo_name'
+    
     owner = user.login
     url = f'https://api.github.com/repos/{owner}/{repo}/projects'
 
@@ -208,14 +205,7 @@ def get_all_issues(token, owner, repo):
         print(f"Failed to create project: {response.status_code}")
         print(response.json())
         sys.exit()
-
-#project_name = input("Enter the project name: ")
-#project_description = input("Enter the project description: ")
-#repo_name_project= input("Enter the repository's name for project to be added in: ")
-
-
-#def create_user_project(token, project_new_name,description_new ):
-    
+   
     headers = {
     "Authorization": f"token {token}",
      "Accept": "application/vnd.github+json",
